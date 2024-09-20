@@ -9,8 +9,6 @@ A responsive weather application built with React that provides real-time weathe
 - [Setup](#setup)
 - [Usage](#usage)
 - [API Details](#api-details)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
