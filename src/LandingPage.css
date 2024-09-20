@@ -1,0 +1,111 @@
+/* Reset margin and padding for the body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Main landing page layout */
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the footer is pushed to the bottom */
+}
+
+/* Navbar styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #007BFF; /* Navbar background color */
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Navbar list item styling */
+.navbar li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Navbar link styling */
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header styling */
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Cards container styling */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    flex: 1; /* Allow the container to grow and push the footer down */
+}
+
+/* Individual card styling */
+.card {
+    background: white;
+    border: 1px solid #007BFF;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative; /* Positioning for pseudo-elements */
+    overflow: hidden; /* To hide the pseudo-element overflow */
+}
+
+/* Pseudo-element for card overlay */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.5); /* Light blue overlay */
+    transform: translateY(-100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Animate movement */
+    z-index: 0; /* Behind the card content */
+}
+
+/* Card hover effects */
+.card:hover::before {
+    transform: translateY(0); /* Move into view on hover */
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(1deg); /* Scale and slight rotation */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Bring the card in front */
+}
+
+/* Card text styling */
+.card h3, .card p {
+    position: relative; /* Bring text above the overlay */
+    z-index: 1; /* Ensure text is above the overlay */
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007BFF;
+    color: white;
+}
+

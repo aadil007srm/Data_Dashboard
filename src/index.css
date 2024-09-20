@@ -1,0 +1,32 @@
+/* index.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  input {
+    margin: 5px;
+    padding: 8px;
+    width: 100px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
